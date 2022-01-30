@@ -13,7 +13,7 @@ body {
   font-family: roboto, arial, helvetica, sans-serif;
 }
 
-#main-container > form {
+#main-container {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 1px 1px 20px rgb(36, 36, 36);
@@ -83,6 +83,40 @@ input::placeholder {
   border-radius: 40px !important;
 }
 
+/* cupom */
+.dv-cupom {
+  border: 1px solid #4caf9d;
+  border-radius: 5px;
+
+  background-color: #5bd8c1;
+
+  display: none;
+}
+
+.texto-cupom {
+  margin: 0 auto;
+
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.texto-cupom > span {
+  font-weight: 600;
+}
+
+.button-close-cupom {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #4aae9cda;
+  background: transparent;
+}
+
+.button-close-cupom:hover {
+  text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.288);
+}
+
 /* modal */
 .modal-box {
   position: fixed;
@@ -123,6 +157,7 @@ input::placeholder {
   color: #4aae9c73;
   background: transparent;
 }
+
 .button-close:hover {
   color: #4aae9b;
 }
