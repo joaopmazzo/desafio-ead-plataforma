@@ -71,7 +71,9 @@ input::placeholder {
   font-weight: 500;
 }
 
-.termos-uso > label > link {
+.termos-uso > label > a {
+  text-decoration: none;
+  cursor: pointer;
   color: rgb(41, 124, 85);
 }
 
@@ -82,7 +84,7 @@ input::placeholder {
 }
 
 /* modal */
-.modal-backdrop {
+.modal-box {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -93,19 +95,23 @@ input::placeholder {
   justify-content: center;
   align-items: center;
 }
-.modal {
+
+.modal-scope {
   background: #ffffff;
   box-shadow: 2px 2px 20px 1px;
   border-radius: 10px;
+  max-width: 50%;
   overflow-x: auto;
   display: flex;
   flex-direction: column;
 }
-.modal-body {
+
+.modal-body-content {
   position: relative;
   padding: 50px 30px;
 }
-.btn-close {
+
+.button-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -114,9 +120,9 @@ input::placeholder {
   padding: 10px;
   cursor: pointer;
   font-weight: bold;
-  color: #4aae9b;
+  color: #4aae9c73;
   background: transparent;
 }
-.btn-close:hover {
-  font-size: 22px;
+.button-close:hover {
+  color: #4aae9b;
 }

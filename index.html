@@ -23,6 +23,14 @@
     <main id="main-container">
       <form>
         <h1 class="titulo-form mt-4">Experimente por 7 dias grátis</h1>
+        <!-- Cupom inserido -->
+        <div class="input-group mb-4 px-3">
+          <span class="input-group-text">
+            <p>Cupon <span>teste</span> aplicado com sucesso</p>
+          </span>
+          <button type="button" class="form-control no-border-left">x</button>
+        </div>
+        <!-- Fim Cupom inserido -->
         <div class="input-group mb-4 px-3">
           <span class="input-group-text">
             <i class="bx bx-user" style="color: #b6b3b3"></i>
@@ -96,9 +104,7 @@
           />
           <label class="ps-1">
             Li e aceito os
-            <a class="termos-uso" onclick="openModal('modal-backdrop')"
-              >termos de uso</a
-            >
+            <a class="termos-uso" onclick="openModal()">termos de uso</a>
           </label>
         </div>
         <div class="input-group mb-4 px-3">
@@ -125,24 +131,47 @@
     </main>
 
     <!-- Modal -->
-    <div id="modal-backdrop" class="modal-backdrop">
-      <div class="modal">
-        <section class="modal-body">
+    <div id="dv-modal" class="modal-box">
+      <div class="modal-scope">
+        <section class="modal-body-content">
           <button
             type="button"
-            class="btn-close"
-            onclick="closeModal('modal-backdrop')"
+            class="button-close me-3"
+            onclick="closeModal()"
           >
             x
           </button>
           <slot name="body" class="body">
-            <p>{{ responseMessage }}</p>
+            <p>
+              Lorem Ipsum è un testo segnaposto utilizzato nel settore della
+              tipografia e della stampa. Lorem Ipsum è considerato il testo
+              segnaposto standard sin dal sedicesimo secolo, quando un anonimo
+              tipografo prese una cassetta di caratteri e li assemblò per
+              preparare un testo campione. È sopravvissuto non solo a più di
+              cinque secoli, ma anche al passaggio alla videoimpaginazione,
+              pervenendoci sostanzialmente inalterato. Fu reso popolare, negli
+              anni ’60, con la diffusione dei fogli di caratteri trasferibili
+              “Letraset”, che contenevano passaggi del Lorem Ipsum, e più
+              recentemente da software di impaginazione come Aldus PageMaker,
+              che includeva versioni del Lorem Ipsum.
+            </p>
           </slot>
+          <button
+            type="button"
+            class="btn btn-submit mt-3 px-4"
+            onclick="closeModal()"
+          >
+            Fechar
+          </button>
         </section>
       </div>
     </div>
     <!-- Modal -->
 
     <script type="text/javascript" src="./js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
   </body>
 </html>
